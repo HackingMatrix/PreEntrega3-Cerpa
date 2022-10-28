@@ -1,0 +1,33 @@
+
+@mixin Pad ($padtop, $padright, $padbot, $padleft) {
+    padding-top: $padtop;
+    
+}
+
+@mixin foot ($bot) {
+    
+    @if $bot {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        padding-bottom: 20px;
+    }
+    @else {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+.footEnd {
+    
+    @include foot ($bot: true);
+    height: 150px;
+
+}
+
+.footCent {
+    @include foot ($bot: false);
+    height: 150px;
+
+}

@@ -1,0 +1,21 @@
+$font_size: (
+  tfuente: 20px,
+  tfuente2: 50px,
+  imgHeight: 400px
+);
+
+$withs: 40px, 400px, 100px, 350px;
+$border_rad: 0px, 10px;
+
+@each $with in $withs {
+    .with-#{$with} {
+      width: $with;
+    }
+  }
+  
+@each $borders in $border_rad {
+  .bord_rad-#{$borders} {
+    border-radius: $borders;
+  }
+}
+  
